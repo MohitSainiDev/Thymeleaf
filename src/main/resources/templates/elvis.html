@@ -13,5 +13,12 @@
 <p th:if="${gender} == 'm'">MALE</p>
 <p th:unless="${gender} == 'm'">FEMALE</p>
 
+<h1>Switch case</h1>
+<div th:switch="${gender}">
+	<p th:case="m">You are Male</p>
+	<p th:case="f">You are FeMale</p>
+	<p th:case="*">No gender specified</p>
+</div>
+
 </body>
 </html>
