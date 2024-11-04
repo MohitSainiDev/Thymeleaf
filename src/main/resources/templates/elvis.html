@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+	<meta charset="UTF-8">
+	<title>Elvis</title>
+	
+</head>
+<body>
+
+<p th:text="${isAdmin}?'Welcome Admin' : 'Welcome Welcome'"></p>
+
+<p th:if="${isAdmin}">You are Admin</p>
+<p th:if="${gender} == 'm'">MALE</p>
+<p th:unless="${gender} == 'm'">FEMALE</p>
+
+</body>
+</html>

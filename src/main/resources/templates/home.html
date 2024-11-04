@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<script type="text/javascript" th:src="@{js/main.js}"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}"></link>
+</head>
+<body>
+
+<p>This is Home</p>
+<p>Welcome, <span th:text="${name}"></span></p>
+<span th:text="${#strings.toUpperCase(name)}"></span>
+<button id="click-button" onclick="main()">Click here</button>
+</body>
+</html>
