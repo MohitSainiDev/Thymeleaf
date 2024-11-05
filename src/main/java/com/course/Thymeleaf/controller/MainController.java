@@ -1,5 +1,7 @@
 package com.course.Thymeleaf.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,5 +22,13 @@ public class MainController {
 		model.addAttribute("isAdmin", true);
 		model.addAttribute("gender", "f");
 		return "elvis";
+	}
+
+	@GetMapping("/each")
+	public String eachExample(Model model) {
+
+		List<String> stringList = List.of("First", "second", "Third");
+		model.addAttribute("list", stringList);
+		return "each";
 	}
 }
