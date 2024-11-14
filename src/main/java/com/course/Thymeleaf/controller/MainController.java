@@ -28,7 +28,7 @@ public class MainController {
 	@GetMapping("/each")
 	public String eachExample(Model model) {
 
-		List<String> stringList = List.of("First", "second", "Third");
+		List<String> stringList = List.of("First", "seconds", "Third");
 		model.addAttribute("list", stringList);
 		return "each";
 	}
